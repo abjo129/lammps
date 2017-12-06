@@ -272,9 +272,9 @@ void ComputeTgtAtom::compute_peratom()
 
 		phase= randphase[molecule[atom1]-1];//(double)molecule[atom1]/(double)maxmol*MY_2PI; 
 
-		factive[atom1][0]=fstr*(2.0*(1.0-(double)signbit(sin(phase)))-1.0)*delx;  
-		factive[atom1][1]=fstr*(2.0*(1.0-(double)signbit(sin(phase)))-1.0)*dely;  
-		factive[atom1][2]=fstr*(2.0*(1.0-(double)signbit(sin(phase)))-1.0)*delz;  
+		factive[atom1][0]=fstr*(2.0*(1.0-omega*(double)signbit(sin(phase)))-1.0)*delx;  
+		factive[atom1][1]=fstr*(2.0*(1.0-omega*(double)signbit(sin(phase)))-1.0)*dely;  
+		factive[atom1][2]=fstr*(2.0*(1.0-omega*(double)signbit(sin(phase)))-1.0)*delz;  
 
 	}
 
